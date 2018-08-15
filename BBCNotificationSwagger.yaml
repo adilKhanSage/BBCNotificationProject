@@ -49,10 +49,6 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/listUsersResponse'
-        '400':
-          description: The request was invalid or cannot be otherwise served 
-          schema:
-            $ref: '#/definitions/errorResponse'
         '500':
           description: A server error was encountered during a downstream call by the API
           schema:
