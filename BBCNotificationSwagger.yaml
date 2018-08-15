@@ -1,0 +1,152 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: BBC Notification Project APIs
+host: localhost
+basePath: /bbc/api
+schemes:
+  - http
+paths:
+  '/v1/users':
+    post:
+      summary: register a new user
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: body
+          in: body
+          schema:
+            $ref: '#/definitions/registerUser'
+      responses:
+        '201':
+          description: Created
+          schema:
+            $ref: '#/definitions/userData'
+        '400':
+          description: The request was invalid or cannot be otherwise served 
+          schema:
+            $ref: '#/definitions/errorResponse'
+        '401':
+          description: Authentication credentials were missing or incorrect.
+          schema:
+            $ref: '#/definitions/errorResponse'
+
+        '500':
+          description: A server error was encountered during a downstream call by the API
+          schema:
+            $ref: '#/definitions/errorResponse' 
+    get:
+      summary: Retrieve list of registered users
+      consumes:
+        - application/json
+      produces:
+        - application/json
+
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/listUsersResponse'
+        '400':
+          description: The request was invalid or cannot be otherwise served 
+          schema:
+            $ref: '#/definitions/errorResponse'
+        '500':
+          description: A server error was encountered during a downstream call by the API
+          schema:
+            $ref: '#/definitions/errorResponse'   
+  '/v1/notifications/{username}':
+    post:
+      summary: send Notification for specif User
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: username
+          in: path
+          type: string
+          required: true
+          description: username of registered user
+      responses:
+        '201':
+          description: Notification Created/Send 
+
+        '400':
+          description: The request was invalid or cannot be otherwise served 
+          schema:
+            $ref: '#/definitions/errorResponse'
+        '404':
+          description: the User not found.
+          schema:
+            $ref: '#/definitions/errorResponse'
+        '500':
+          description: A server error was encountered during a downstream call by the API
+          schema:
+            $ref: '#/definitions/errorResponse'  
+definitions:
+  registerUser:
+    required:
+      - username
+      - accessToken
+    properties:
+      username:
+        type: string
+        description: username for registration 
+      accessToken:
+        type: string
+        description: accessToken for user getting registered
+  errorResponse:
+    type: object
+    required:
+      - errorId
+      - errorMsg
+      - errorCode
+      - errorType
+      - contextInfo
+    properties:
+      errorId:
+        type: string
+        description: Error ID.
+        example: 123456789
+      errorMsg:
+        type: string
+        description: Error Message
+        example: error
+      errorCode:
+        type: string
+        description: Error Message
+        example: TECH-xx-001
+      errorType:
+        type: string
+        description: |
+         Type of error 
+         * Technical 
+         * Business
+        example: Technical
+  listUsersResponse:
+    type: array
+    items:
+        $ref: "#/definitions/userData"
+  userData:
+    required:
+      - username
+      - accessToken
+    properties:
+      username:
+        type: string
+        description: username for registration 
+      accessToken:
+        type: string
+        description: accessToken for user getting registered
+      creationTime:
+        type: string
+        description: username created time stamp
+      numOfNotificationsPushed:
+        type: number
+        description: Number Of Notifications Pushed
+
+
+        
