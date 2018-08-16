@@ -59,7 +59,10 @@ it will show the outcomes of the test as shown below.
 
 ## Design Details
 
-As shown below the illustration of all the API Used in Swagger Format swagger file can be found at (https://github.com/wl0akh/BBCNotificationProject/blob/master/swagger/BBCNotificationSwagger.yaml)
+As shown below the illustration of all the API Used in Swagger Format swagger file can be found at 
+
+(https://github.com/wl0akh/BBCNotificationProject/blob/master/swagger/BBCNotificationSwagger.yaml)
+
 ![swaggerimage](https://user-images.githubusercontent.com/13693247/44215862-76b5d200-a16b-11e8-984d-757551468225.PNG)
 
 ## Authors
