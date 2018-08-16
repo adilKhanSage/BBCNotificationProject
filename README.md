@@ -27,14 +27,14 @@ And Run the following command to start the tool
 npm start
 ```
 ### User Guide
-after going the above installasion instructions the REST services should be avalable on port 3000 as shown below 
-## to see all the users in the system send a GET request on http://localhost:3000/bbc/api/v1/users as shown below
+after going the above installasion instructions the REST services should be avalable on port 3000.
+#### To see all the users in the system send a GET request on http://localhost:3000/bbc/api/v1/users as shown below
 ![upandrunningbbcnotif](https://user-images.githubusercontent.com/13693247/44214403-f80b6580-a167-11e8-8548-42ea71445ee6.PNG)
-## to Register a new users in the system send a POST request on http://localhost:3000/bbc/api/v1/users with user data in request body as shown below
+#### To Register a new users in the system send a POST request on http://localhost:3000/bbc/api/v1/users with user data in request body as shown below
 ![registeruserbbcnotifications](https://user-images.githubusercontent.com/13693247/44215098-93510a80-a169-11e8-9b7a-dce11221d42b.png)
-## to check if the recently registered user is in the system send a GET request on http://localhost:3000/bbc/api/v1/users as shown below
+#### To check if the recently registered user is in the system send a GET request on http://localhost:3000/bbc/api/v1/users as shown below
 ![listallusersbbcnotification](https://user-images.githubusercontent.com/13693247/44215212-e3c86800-a169-11e8-9211-03896bb53d1f.png)
-## Finaly to Send a Notifications to a registered users send a POST request on localhost:3000/bbc/api/v1/notifications/{username} with username in path as shown below
+#### Finaly to Send a Notifications to a registered users send a POST request on localhost:3000/bbc/api/v1/notifications/{username} with username in path as shown below
 ![sendnotificationbbcnotification](https://user-images.githubusercontent.com/13693247/44215259-fe024600-a169-11e8-8b5d-61fa89278c29.png)
 
 ## Running the tests
