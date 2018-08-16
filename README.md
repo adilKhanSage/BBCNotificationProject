@@ -11,11 +11,9 @@ These instructions will get you a copy of the project up and running on your loc
 you need to have NodeJs on your mechine.
 
 
-### Installing
+### Installation Instructions
 
-A step by step task with examples that tell you how to get this project Up and running
-
-Download Zip file from github and Un-Zip Code 
+Download this repository as Zip file from github and Un-Zip Code. 
 CD into the folder containing the code
 ```
 cd BBCNotificationProject
@@ -27,6 +25,7 @@ And Run the following command to start the tool
 npm start
 ```
 ### User Guide
+
 after going the above installasion instructions the REST services should be avalable on port 3000.
 #### To see all the users in the system send a GET request on http://localhost:3000/bbc/api/v1/users as shown below
 ![upandrunningbbcnotif](https://user-images.githubusercontent.com/13693247/44214403-f80b6580-a167-11e8-8548-42ea71445ee6.PNG)
@@ -37,7 +36,7 @@ after going the above installasion instructions the REST services should be aval
 #### Finaly to Send a Notifications to a registered users send a POST request on localhost:3000/bbc/api/v1/notifications/{username} with username in path as shown below
 ![sendnotificationbbcnotification](https://user-images.githubusercontent.com/13693247/44215259-fe024600-a169-11e8-8b5d-61fa89278c29.png)
 
-## Running the tests
+## Running the automated tests
 
 To run the automated tests for this system
 
@@ -57,6 +56,11 @@ it will show the outcomes of the test as shown below.
 * [ExpressJs](https://nodejs.org/en/) - The MVC web framework used
 * [Mocha](https://mochajs.org/) - Mocha is a feature-rich JavaScript test framework running 
 * [Chai](http://www.chaijs.com/) - Chai is a BDD / TDD assertion library
+
+## Design Details
+
+As shown below the illustration of all the API Used in Swagger Format swagger file can be found at (https://github.com/wl0akh/BBCNotificationProject/blob/master/swagger/BBCNotificationSwagger.yaml)
+![swaggerimage](https://user-images.githubusercontent.com/13693247/44215862-76b5d200-a16b-11e8-984d-757551468225.PNG)
 
 ## Authors
 
