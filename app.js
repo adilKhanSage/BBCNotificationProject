@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
 app.use(express.json());
-const user = require("./user");
-const notifications = require("./notifications");
+const user = require("user");
+const notifications = require("./notificationsConfig");
 app.post('/bbc/api/v1/users', (req, res) => user.register(req,res));
 app.get('/bbc/api/v1/users', (req, res) => user.search(req,res));
 app.post('/bbc/api/v1/notifications/:username', (req, res) => (user.notify(req,res,notifications.send)));
