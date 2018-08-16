@@ -26,12 +26,16 @@ And Run the following command to start the tool
 ```
 npm start
 ```
-
-and the REST services should be avalable on port 3000 http://localhost:3000 as shown below 
-![image](https://user-images.githubusercontent.com/13693247/40586710-e906dc5c-61bd-11e8-9247-266e687c5d97.png)
-![image](https://user-images.githubusercontent.com/13693247/40586811-382decc0-61bf-11e8-876e-8d2e92cc0af6.png)
-![image](https://user-images.githubusercontent.com/13693247/40586854-b978964a-61bf-11e8-81fa-d45846962e52.png)
-
+### User Guide
+after going the above installasion instructions the REST services should be avalable on port 3000 as shown below 
+## to see all the users in the system send a GET request on http://localhost:3000/bbc/api/v1/users as shown below
+![upandrunningbbcnotif](https://user-images.githubusercontent.com/13693247/44214403-f80b6580-a167-11e8-8548-42ea71445ee6.PNG)
+## to Register a new users in the system send a POST request on http://localhost:3000/bbc/api/v1/users with user data in request body as shown below
+![registeruserbbcnotifications](https://user-images.githubusercontent.com/13693247/44215098-93510a80-a169-11e8-9b7a-dce11221d42b.png)
+## to check if the recently registered user is in the system send a GET request on http://localhost:3000/bbc/api/v1/users as shown below
+![listallusersbbcnotification](https://user-images.githubusercontent.com/13693247/44215212-e3c86800-a169-11e8-9211-03896bb53d1f.png)
+## Finaly to Send a Notifications to a registered users send a POST request on localhost:3000/bbc/api/v1/notifications/{username} with username in path as shown below
+![sendnotificationbbcnotification](https://user-images.githubusercontent.com/13693247/44215259-fe024600-a169-11e8-8b5d-61fa89278c29.png)
 
 ## Running the tests
 
@@ -44,7 +48,7 @@ npm test
 ```
 it will show the outcomes of the test as shown below.
 
-![image](https://user-images.githubusercontent.com/13693247/40586791-f21d78ea-61be-11e8-97b7-67da8e26e839.png)
+![testrunningbbcnotification](https://user-images.githubusercontent.com/13693247/44214676-a0212e80-a168-11e8-9415-5f6fc855d9c3.PNG)
 
 
 ## Built With
